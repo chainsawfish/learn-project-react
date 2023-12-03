@@ -252,11 +252,9 @@ const user = {
 };
 
 function App() {
-  const handleClick = () => {};
-
   return (
     <>
-      <button onClick={handleClick}>OK</button>
+      <button>OK</button>
     </>
   );
 }
