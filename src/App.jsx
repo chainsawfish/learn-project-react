@@ -251,12 +251,24 @@ const user = {
   hobby: ["football", "volleyball", "walking"],
 };
 
-function App() {
-  const handleClick = () => {};
+const cardStyle = {
+  border: "0px solid black",
+  padding: "10px",
+  margin: "10px",
+  borderRadius: "10px",
+  boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.7)",
+};
 
+function App() {
   return (
     <>
-      <button onClick={handleClick}>OK</button>
+      {users.map((card) => {
+        return (
+          <div key={card.id} style={cardStyle}>
+            adsf
+          </div>
+        );
+      })}
     </>
   );
 }
