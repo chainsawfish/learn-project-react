@@ -12,12 +12,12 @@ const cardStyle = {
 const URL_POSTS = "https://jsonplaceholder.typicode.com/posts";
 
 function App() {
-  console.log("rener");
+  console.log("render");
   const [first, setfirst] = useState(null);
 
   useEffect(() => {
-    const p = axios.get(URL_POSTS).then((r) => {
-      setfirst(r.data);
+    axios.get(URL_POSTS).then((response) => {
+      setfirst(response.data);
     });
   }, []);
 
@@ -26,7 +26,7 @@ function App() {
       {first &&
         first.map((post) => {
           return (
-            <div key={post.id}>
+            <div key={post.id} style={cardStyle}>
               <div>{post.title}</div>
               <div>----------</div>
             </div>
